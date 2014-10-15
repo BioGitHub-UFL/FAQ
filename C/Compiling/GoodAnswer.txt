@@ -1,0 +1,9 @@
+Oh, I've had that problem before! You need to explicitly link the header file on the linux cluster. Try[
+  gcc Function.c Header.h -o Counter -lm
+]
+
+Also, gcc has some helpful debugging tools that you can take advantage of. How about[
+  gcc -Wall Function.c Header.h -o Counter -lm
+]
+
+Good Luck!
