@@ -1,0 +1,1 @@
+I can't dynamically allocate memory for a 3 dimensional array. The code is on lines 200-221 of Optimize.c. The imput files are included as well.
