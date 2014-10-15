@@ -1,0 +1,8 @@
+My C source code won't compile on the cluster. It compiles just fine on my mac!
+On my mac, I use[
+
+gcc Function.c Header.h -o Counter
+
+]
+
+I even tried specifying the architecture, but still no luck.
