@@ -1,0 +1,19 @@
+vec2dist <- function(dist.vector,loc.names){
+loc.num <- length(loc.names)
+dist.mat <- matrix(0,nrow=loc.num,ncol=loc.num,dimnames =list(loc.names,loc.names))
+start <- c(1,rep(0,loc.num-1)) 
+end <- c(loc.num-1,rep(0,loc.num-1))
+steps <- (loc.num-1):0
+x1 <- c(rep(0,1),dist.vector[start[1]:end[1]])
+dist.mat[,1]<- x1
+
+for (i in 2:(loc.num-1)){
+start[i] <- end[i-1]+1
+end[i] <- end[i-1]+steps[i]
+x <- c(rep(0,i),dist.vector[start[i]:end[i]])
+dist.mat[,i] <- x
+}
+
+dist.mat<-as.dist(dist.mat)
+return(dist.mat)
+}
